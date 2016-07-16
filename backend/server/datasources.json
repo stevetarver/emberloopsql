@@ -1,1 +1,11 @@
-{}
+{
+  "emberloopsqldb": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "application",
+    "password": "root",
+    "name": "emberloopsqldb",
+    "connector": "mysql",
+    "user": "root"
+  }
+}

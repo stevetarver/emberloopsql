@@ -12,5 +12,9 @@
       "../common/mixins",
       "./mixins"
     ]
+  },
+  "contacts": {
+    "dataSource": "emberloopsqldb",
+    "public": true
   }
 }
