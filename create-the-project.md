@@ -28,8 +28,6 @@ $ apic loopback
     Created server/middleware.production.json
     Created server/model-config.json
     Created server/server.js
-$ mv backend/* .
-$ rm -rf backend
 ```
 
 Ember provides a `.gitignore` for you - just ember taking care of its devels. As of 2.6.3, it no longer inits a git repo or makes the initial commit for you.

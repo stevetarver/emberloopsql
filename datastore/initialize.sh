@@ -30,9 +30,9 @@ docker run --name $DOCKER_CONTAINER_NAME \
 echo Waiting 30s to give the Percona container some time to start and initialize
 sleep 30
 
-# Create a new container, link it to datastore:mysql command line client
-# and import our dump. A separate container is used to isolate the volume
-# shared for import - it is deleted after the import completes.
+# Link to the datastore:mysql command line client and import our dump.
+# A separate container is used to isolate the volume shared
+# for import - it is deleted after the import completes.
 docker run -it --link $DOCKER_CONTAINER_NAME:mysql \
   -v $DUMPS_DIR:/tmp/import \
   --rm \
