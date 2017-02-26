@@ -97,7 +97,24 @@ mysql> show schemas;
 +--------------------+
 5 rows in set (0.00 sec)
 
-mysql>
+mysql> use application
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+
+Database changed
+mysql> show tables;
++-----------------------+
+| Tables_in_application |
++-----------------------+
+| contacts              |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from contacts;
++-----+------------+---------------+--------------------------------+---------------------------------+---------------------+----------------------+-------+-------+--------------+--------------+------------------------------------+--------------------------------------------+---------------------+---------------------+
+| id  | firstName  | lastName      | companyName                    | address                         | city                | county               | state | zip   | phone1       | phone2       | email                              | website                                    | created             | modified            |
+# ...
 ```
 
 To see database logs:

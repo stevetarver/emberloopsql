@@ -27,8 +27,8 @@ docker run --name $DOCKER_CONTAINER_NAME \
     -e MYSQL_ROOT_PASSWORD=root \
     -d $DOCKER_IMAGE
 
-# Give the Percona container some time to start and initialize
-sleep 10
+echo Waiting 30s to give the Percona container some time to start and initialize
+sleep 30
 
 # Create a new container, link it to datastore:mysql command line client
 # and import our dump. A separate container is used to isolate the volume

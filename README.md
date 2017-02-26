@@ -1,5 +1,7 @@
 # EmberLoopSql
 
+**NOTE** Currently this is a WiP and running it is a bit sketchy. The READMEs reflect what is intended and not necessarily what is currently implemented.
+
 Pronounced "ember-loop-cicle"
 
 This project contains a full stack in a single repo:
@@ -32,28 +34,25 @@ StrongLoop
 
 ### Install
 
-Run the project's `install.sh` script to install each project's dependencies.
+Run `npm install` in the `frontend` and `backend` directories. The simplest way to install and run the project is to run the project root `initialize.sh` script.
 
 ## Running the project locally
 
+1. Run the root project `initialize.sh` script
+1. `backend` and `frontend` output is redirected to respective `nohup.out` files
+1. Ember app is available at [http://localhost:4200](http://localhost:4200)
+1. Select Contacts -> All to see data
+
+### Details
+
 Each of datastore, backend, and frontend are separate projects and can be run independently or in concert.
 
-Each directory contains a `start.sh` script that will start the frontend and backend in local, development mode, and the datastore as a docker container. 
+The datastore has bash scripts to simplify initializing, restart, stop, start.
 
-You may need to tweek the backend's datasource connection to point to the correct docker machine.
-
-## Building the project
-
-### Building
-
-Each of datastore, backend, and frontend are their own docker containers anticipating future scaling; a POC of sorts.
-
-Run the project's `build.sh` script to build each of the docker containers.
-
-When the docker images are built, run `start-docker.sh` to start and connect each of the containers. Then you can view the app via browser.
-
-### Mac
+The frontend and backend directories use `npm` to install and start the project.
 
 
+## TODO
 
-
+* Create dockerfiles for each of datastore, backend, frontend
+* Create docker-compose.yml to link each of above containers
